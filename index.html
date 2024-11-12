@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>pic-toggle</title>
+   <style>
+      .card {
+         height: 550px;
+         width: 500px;
+         background-color: #ccffff;
+         display: block;
+         margin: 20px auto;
+         padding: 20px;
+      }
+
+      .text-center {
+         text-align: center;
+      }
+
+      .img {
+         height: 350px;
+         width: 350px;
+         display: block;
+         margin: 20px auto;
+         padding: auto;
+      }
+
+      #button {
+         height: 35px;
+         width: 90px;
+         background-color: rgba(244, 211, 176, 0.931);
+         border: 3px solid rgb(177, 111, 11);
+         border-radius: 8px;
+         font-size: large;
+         margin-top: 20px;
+
+      }
+
+      .btn-container {
+         display: flex;
+         justify-content: space-around;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="card">
+      <h1 class="text-center" id="headline">Jungle Toggler</h1>
+      <img class="img" id="img" src="./elephant.jpg">
+      <div class="btn-container">
+         <button id="button" onclick="toggle('one')">Dog</button>
+         <button id="button" onclick="toggle('two')">Elephant</button>
+         <button id="button" onclick="toggle('three')">Tiger</button>
+      </div>
+   </div>
+   <script>
+
+      function toggle(mode) {
+         const animalimg = document.getElementById('img');
+
+         if (mode == 'one') {
+            animalimg.src = 'dog.jpg';
+         }
+         else if (mode == 'two')
+          {
+            animalimg.src = 'elephant.jpg';
+         }
+         else 
+         {
+            animalimg.src = 'tiger.jpg';
+         }
+      }  
+   </script>
+</body>
+</html>
